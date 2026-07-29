@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "start": "docker run --rm -it -p 8001:8000 -v $(pwd):/app -w /app php:7.4-cli php artisan serve --host=0.0.0.0 --port=8000",
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",
