@@ -49,7 +49,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "serve": "@php artisan serve",
+        "serve": "@php -r \"echo '\\n  ➜ JourneyLog is ready! Click here: http://localhost:8001\\n\\n';\" && @php artisan serve --port=8001",
         "setup": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate --ansi",
